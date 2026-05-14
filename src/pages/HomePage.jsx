@@ -1,31 +1,31 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Car, ShieldCheck, Zap, Heart, ArrowRight, Sparkles } from 'lucide-react';
+import { Car, ShieldCheck, Zap, Heart, ArrowRight } from 'lucide-react';
 
 const HomePage = () => {
   const features = [
     {
       icon: Car,
-      title: 'Large catalogue',
-      description: 'Des dizaines de véhicules sélectionnés pour vous, du citadin au SUV.',
+      title: 'Catalogue varié',
+      description: 'Plusieurs véhicules disponibles à l\'achat ou à la location.',
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
       icon: ShieldCheck,
-      title: 'Sécurisé',
-      description: 'Toutes nos transactions sont chiffrées avec les dernières technologies.',
+      title: 'Authentification sécurisée',
+      description: 'Connexion par JWT et gestion des rôles utilisateur.',
       gradient: 'from-purple-500 to-pink-500'
     },
     {
       icon: Zap,
-      title: 'Rapide',
-      description: 'Déposez un dossier en moins de 3 minutes et obtenez une réponse rapide.',
+      title: 'Dossier en ligne',
+      description: 'Déposez votre demande directement depuis la fiche du véhicule.',
       gradient: 'from-emerald-500 to-teal-500'
     },
     {
       icon: Heart,
-      title: 'Service client',
-      description: 'Une équipe disponible et passionnée pour répondre à toutes vos questions.',
+      title: 'Suivi simple',
+      description: 'Retrouvez l\'état de vos dossiers depuis votre espace.',
       gradient: 'from-orange-500 to-red-500'
     }
   ];
@@ -45,24 +45,14 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-6"
-            >
-              <Sparkles className="w-4 h-4 text-primary-400" />
-              <span className="text-sm">Nouvelle plateforme 2026</span>
-            </motion.div>
-
             <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-              Votre prochain
+              Trouvez votre
               <br />
-              <span className="gradient-text">véhicule vous attend</span>
+              <span className="gradient-text">prochain véhicule</span>
             </h1>
 
             <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-              Achat, location, location longue durée. Plus de 50 véhicules sélectionnés avec soin pour répondre à tous vos besoins.
+              Achat et location de véhicules. Consultez le catalogue et déposez un dossier en ligne.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -74,24 +64,6 @@ const HomePage = () => {
                 Créer un compte
               </Link>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="grid grid-cols-3 gap-8 mt-20 max-w-2xl mx-auto"
-            >
-              {[
-                { value: '50+', label: 'Véhicules' },
-                { value: '100%', label: 'Sécurisé' },
-                { value: '24/7', label: 'Support' }
-              ].map((stat, i) => (
-                <div key={i} className="text-center">
-                  <div className="text-4xl font-bold gradient-text">{stat.value}</div>
-                  <div className="text-sm text-white/60 mt-1">{stat.label}</div>
-                </div>
-              ))}
-            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -105,11 +77,8 @@ const HomePage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Pourquoi <span className="gradient-text">M-Motors</span> ?
+              Comment ça marche
             </h2>
-            <p className="text-white/60 text-lg">
-              Une expérience pensée pour vous, du début à la fin.
-            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -142,13 +111,13 @@ const HomePage = () => {
             className="card text-center max-w-3xl mx-auto py-16"
           >
             <h2 className="text-4xl font-bold mb-4">
-              Prêt à trouver votre véhicule ?
+              Prêt à commencer ?
             </h2>
             <p className="text-white/60 mb-8">
-              Inscrivez-vous gratuitement et déposez votre premier dossier en quelques minutes.
+              Créez votre compte pour déposer un premier dossier.
             </p>
             <Link to="/register" className="btn-primary inline-flex items-center gap-2">
-              Commencer maintenant
+              S'inscrire
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>

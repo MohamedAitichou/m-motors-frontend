@@ -12,7 +12,7 @@ const Footer = () => (
             <span className="text-xl font-bold gradient-text">M-Motors</span>
           </div>
           <p className="text-white/60 text-sm">
-            Location et achat de véhicules de qualité depuis 2026.
+            Location et achat de véhicules.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ const Footer = () => (
       </div>
 
       <div className="mt-8 pt-8 border-t border-white/10 text-center text-sm text-white/40">
-        © 2026 M-Motors. Bachelor HETIC - Bloc 3.
+        © 2026 M-Motors.
       </div>
     </div>
   </footer>

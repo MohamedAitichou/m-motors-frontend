@@ -60,7 +60,7 @@ const RegisterPage = () => {
                 onChange={(e) => setForm({ ...form, prenom: e.target.value })}
                 required
                 className="input-field"
-                placeholder="Mohamed"
+                placeholder="Prenom"
               />
             </div>
             <div>
@@ -71,7 +71,7 @@ const RegisterPage = () => {
                 onChange={(e) => setForm({ ...form, nom: e.target.value })}
                 required
                 className="input-field"
-                placeholder="Ait Ichou"
+                placeholder="Nom"
               />
             </div>
           </div>
