@@ -4,6 +4,8 @@ import api from '../api/axios';
 import DossierCard from '../components/DossierCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 
 const MyDossiersPage = () => {
   const [dossiers, setDossiers] = useState([]);
@@ -37,7 +39,7 @@ const MyDossiersPage = () => {
         <div className="card text-center py-16">
           <FileText className="w-16 h-16 mx-auto mb-4 text-white/30" />
           <p className="text-white/60 mb-4">Vous n'avez pas encore de dossier</p>
-          <a href="/vehicles" className="btn-primary inline-block">Voir les véhicules</a>
+          <Link to="/vehicles" className="btn-primary inline-block">Voir les véhicules</Link>
         </div>
       ) : (
         <div className="space-y-4">
